@@ -14,8 +14,8 @@ Study Public Release Date	2018-08-29
 				
 # Study Publication				
 Study PubMed ID	30002254			
-Study Publication Title	Dual spindle formation in zygotes keeps parental genomes apart in early mammalian embryos			
-Study Author List	Judith Reichmann, Bianca Nijmeijer, M. Julius Hossain, Manuel Eguren, Isabell Schneider, Antonio Z. Politi, Maria J. Roberti, Lars Hufnagel, Takashi Hiiragi and Jan Ellenberg			
+Study Publication Title	Dual-spindle formation in zygotes keeps parental genomes apart in early mammalian embryos.			
+Study Author List	Reichmann J, Nijmeijer B, Hossain MJ, Eguren M, Schneider I, Politi AZ, Roberti MJ, Hufnagel L, Hiiragi T, Ellenberg J			
 Study DOI	https://doi.org/10.1126/science.aar7462			
 				
 # Study Contacts				
