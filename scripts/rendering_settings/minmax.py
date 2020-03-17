@@ -120,7 +120,7 @@ def calcStatsInfo(conn, imageId, choice, debug=False):
         statsInfos.update(x)
 
     if debug:
-        print "Loaded %s tile(s) (%s bytes)" % (tile_count, byte_count)
+        print("Loaded %s tile(s) (%s bytes)" % (tile_count, byte_count))
     return statsInfos
 
 
@@ -146,7 +146,7 @@ def processImages(conn, scriptParams):
     tb = TableBuilder("Context", "Channel", "Min", "Max")
     statsInfos = dict()
     for iId in imageIds:
-        print "image id %s " % iId
+        print("image id %s " % iId)
         statsInfo = calcStatsInfo(conn, iId, choice, debug)
         statsInfos[iId] = statsInfo
         for c, si in sorted(statsInfo.items()):
@@ -164,7 +164,7 @@ def processImages(conn, scriptParams):
         tb.row("Total: average", c, int(avg(c_min)), int(avg(c_max)))
 
     if scriptParams["DryRun"]:
-        print str(tb.build())
+        print(str(tb.build()))
     else:
         combine = scriptParams["Combine"]
         for iId in imageIds:
@@ -194,8 +194,8 @@ def processImages(conn, scriptParams):
                     raise Exception("unknown combine: %s" % combine)
 
                 if debug:
-                    print "Image:%s(c=%s) - %s StatsInfo(%s, %s)" % (
-                        iId, c, action, si.globalMin.val, si.globalMax.val)
+                    print("Image:%s(c=%s) - %s StatsInfo(%s, %s)" % (
+                        iId, c, action, si.globalMin.val, si.globalMax.val))
                 ch._obj.statsInfo = si
                 ch.save()
 
@@ -212,7 +212,7 @@ def runAsScript():
 
         containerService = conn.getContainerService()
         tmp = containerService.getImages("Project", [405], None)
-        ids = map(lambda img: long(img.getId()._val), tmp)
+        ids = map(lambda img: int(img.getId()._val), tmp)
         scriptParams = {
             "Data_Type": "Image",
             "IDs": ids,
